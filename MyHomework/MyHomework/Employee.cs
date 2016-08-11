@@ -40,5 +40,12 @@ namespace MyHomework
             b.availableDaysOff = SubstractDays(b, a);
         }
 
+        public void NegativeLeaveDays(Employee b, Leave a)
+        {
+           
+            int d = SubstractDays(b, a);
+            if (d < a.duration)
+                throw new NegativeLeaveDays("Numarul de zile ramase nu poate fi mai mare decat durata concediului");
+        }
     }
 }
