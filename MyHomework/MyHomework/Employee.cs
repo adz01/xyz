@@ -21,12 +21,17 @@ namespace MyHomework
             salary = salariu;
             availebleDaysOff = DaysOff;
         }
-        public void DisplayInfo()
+        public void DisplayInfo(Employee a)
         {
-            Console.WriteLine("Nume: ", lastname);
-            Console.WriteLine("Prenume: ", firstname);
-            Console.WriteLine("Salariu: ", salary);
-            Console.WriteLine("Numar zile disponibile: ", availebleDaysOff);
+            Console.WriteLine("Nume: ", a.lastname);
+            Console.WriteLine("Prenume: ", a.firstname);
+            Console.WriteLine("Salariu: ", a.salary);
+            Console.WriteLine("Numar zile disponibile: ", a.availebleDaysOff);
+        }
+
+        private int SubstractDays()
+        {
+
         }
     }
 }
