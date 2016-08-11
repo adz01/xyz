@@ -10,7 +10,7 @@ namespace MyHomework
     {
         DateTime dateOfEmployement { get; set; }
         decimal salary { get; set; }
-        int availebleDaysOff { get; set; }
+        int availableDaysOff { get; set; }
 
         public Employee(string nume, string prenume, DateTime dataNastere, DateTime dataAngajare, decimal salariu, int DaysOff)
         {
@@ -19,19 +19,26 @@ namespace MyHomework
             dateOfBirth = dataNastere;
             dateOfEmployement = dataAngajare;
             salary = salariu;
-            availebleDaysOff = DaysOff;
+            availableDaysOff = DaysOff;
         }
         public void DisplayInfo(Employee a)
         {
             Console.WriteLine("Nume: ", a.lastname);
             Console.WriteLine("Prenume: ", a.firstname);
             Console.WriteLine("Salariu: ", a.salary);
-            Console.WriteLine("Numar zile disponibile: ", a.availebleDaysOff);
+            Console.WriteLine("Numar zile disponibile: ", a.availableDaysOff);
         }
-
-        private int SubstractDays()
+        
+        private int SubstractDays(Employee b, Leave a)
         {
-
+            b.availableDaysOff = b.availableDaysOff - a.duration;
+            return b.availableDaysOff;
         }
+
+        public void AddNewLeave(Employee b, Leave a)
+        {
+            b.availableDaysOff = SubstractDays(b, a);
+        }
+
     }
 }
