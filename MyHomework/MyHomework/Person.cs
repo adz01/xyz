@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyHomework
 {
-    class Person
+     class Person
     {
-        string firstname { get; set; }
-        string lastname { get; set; }
-        DateTime dateOfBirth { get; set; }
+        protected string firstname { get; set; }
+        protected string lastname { get; set; }
+        protected DateTime dateOfBirth { get; set; }
     }
 }
