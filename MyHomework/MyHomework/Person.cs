@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyHomework
 {
-     class Person
+     public class Person
     {
         protected string firstname { get; set; }
         protected string lastname { get; set; }
